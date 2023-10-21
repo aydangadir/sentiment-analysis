@@ -1,0 +1,5 @@
+{
+    "preprocessing": {
+        "stem_lem" : "lemmatization"
+    }
+}
