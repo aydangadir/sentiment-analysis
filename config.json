@@ -1,5 +1,9 @@
 {
     "preprocessing": {
-        "stem_lem" : "lemmatization"
+        "stem_lem" : "lemmatization",
+        "execute": 1
+    },
+    "sentiment": {
+        "model": "textblob"
     }
 }
