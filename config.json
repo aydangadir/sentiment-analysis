@@ -3,7 +3,7 @@
         "labeled_data_path": "data_/labeled.txt"
     },
     "preprocessing": {
-        "stem_lem" : "lemmatization",
+        "stem_lem" : "stemming",
         "execute": 1
     },
     "sentiment": {

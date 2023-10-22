@@ -1,4 +1,4 @@
-from utils import import_json, if_exists
+from utils import *
 import pandas as pd
 import pickle
 from sklearn.linear_model import LogisticRegression
@@ -37,6 +37,8 @@ class log_reg:
         self.log_reg.fit(X_train, y_train)
 
         y_pred = self.log_reg.predict(X_test)
+        self.save_model()
+
         return accuracy_score(y_test, y_pred)
 
     def predict(self, X):
@@ -59,6 +61,7 @@ class log_reg:
 
     def save_model(self):
         """Saves the Logistic Regression model to a pickle file."""
+        create_folder(self.config['sentiment']['path'])
         with open(self.path, 'wb') as f:
             pickle.dump(self.log_reg, f)
 

@@ -56,9 +56,12 @@ class feature_extraction:
             The trained feature extraction model.
         """
         if self.config['sentiment']['feature_extractor'].lower() == "count_vectorizer":
-            return self.count_vectorizer(df)
+            features = self.count_vectorizer(df)
         elif self.config['sentiment']['feature_extractor'].lower() == "tfidf_vectorizer":
-            return self.tfidf_vectorizer(df)
+            features =  self.tfidf_vectorizer(df)
+
+        self.save_model()
+        return features
 
     def transform(self, text):
         """
@@ -80,6 +83,7 @@ class feature_extraction:
 
     def save_model(self):
         """Saves the feature extraction model to a pickle file."""
+        create_folder(self.config['sentiment']['path'])
         with open(self.path, 'wb') as f:
             pickle.dump(self.feature_extractor, f)
 
