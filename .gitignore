@@ -3,3 +3,6 @@ env/*
 
 test.ipynb
 __pycache__
+
+tmp
+tmp/*
