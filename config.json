@@ -1,9 +1,14 @@
 {
+    "data":{
+        "labeled_data_path": "data_/labeled.txt"
+    },
     "preprocessing": {
         "stem_lem" : "lemmatization",
         "execute": 1
     },
     "sentiment": {
-        "model": "textblob"
+        "model": "textblob",
+        "feature_extractor": "tfidf_vectorizer",
+        "path": "tmp/test/"
     }
 }
