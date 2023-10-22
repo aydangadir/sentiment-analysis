@@ -33,7 +33,7 @@ def delete_stop_words(text: string, additional_stopwords: list = None):
     Returns:
         str: The input text without any stop words.
     """
-    nltk.download('stopwords')
+    # nltk.download('stopwords')
     stop_words = set(stopwords.words('english'))
 
     if additional_stopwords is not None:

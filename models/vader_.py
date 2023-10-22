@@ -11,7 +11,7 @@ class vader_:
         Args:
             text (str): The text for which sentiment analysis needs to be performed.
         """
-        nltk.download('vader_lexicon')
+        # nltk.download('vader_lexicon')
         self.text = text
         self.scores = SentimentIntensityAnalyzer().polarity_scores(self.text)
 
