@@ -1,4 +1,5 @@
 import json
+import os
 
 def import_json():
     """
@@ -11,3 +12,12 @@ def import_json():
         dictionary = json.load(f)
         
     return dictionary
+
+def if_exists(path):
+    return os.path.exists(path)
+
+def create_folder(path):
+    if if_exists(path):
+        return
+    
+    os.mkdir(path)
