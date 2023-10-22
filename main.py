@@ -5,6 +5,7 @@ from preprocessing.utils import cleaning_text
 from data_.utils import *
 from models.feature_extraction import feature_extraction
 from models.logistic_reg import log_reg
+from models.svm_ import svm_
 
 if __name__ == "__main__":
     # text = "I hate this"
@@ -30,5 +31,5 @@ if __name__ == "__main__":
     feature_extractor = feature_extraction()
     df['features'] = list(feature_extractor.train(df).toarray())
 
-    log_reg_ = log_reg()
+    log_reg_ = svm_()
     print(log_reg_.train(df))
