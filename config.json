@@ -4,7 +4,7 @@
     },
     "preprocessing": {
         "stem_lem" : "stemming",
-        "execute": 1
+        "execute": 0
     },
     "sentiment": {
         "model": "textblob",
