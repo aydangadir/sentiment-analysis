@@ -44,3 +44,7 @@ class textblob_:
             float: The subjectivity score of the text ranging [0:1] -> 0: fact, 1: public opinion
         """
         return self.blob.sentiment.subjectivity
+    
+    def get_scores(self) -> dict:
+        return {"Sentiment": self.get_polarity(),
+                "Subjectivity": self.get_subjectivity()}
